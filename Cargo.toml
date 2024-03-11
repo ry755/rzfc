@@ -1,0 +1,11 @@
+[package]
+name = "rzfc"
+version = "0.2.0"
+authors = ["ry755"]
+edition = "2021"
+
+[dependencies]
+tms9918a_emu = "0.3"
+minifb = "0.24"
+z80emu = "0.8"
+rand = "0.8"
