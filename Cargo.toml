@@ -6,6 +6,6 @@ edition = "2021"
 
 [dependencies]
 tms9918a_emu = "0.3"
-minifb = "0.24"
-z80emu = "0.8"
+minifb = "0.25"
+z80emu = "0.11"
 rand = "0.8"
