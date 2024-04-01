@@ -5,11 +5,12 @@ RZFC is an old project (with a new name that I just came up with on the spot) fr
 General specs are:
  - 32KB ROM
  - 32KB RAM
- - 16KB VRAM
+ - TMS9918A VDP with 16KB VRAM
  - 4 MHz clock (though this emulator currently just runs uncapped)
 
-The included rom.bin file is a very incomplete and broken homemade BASIC interpreter.
+The included rom.bin file is a build of my BIOS + RY-DOS, a simple disk operating system I wrote years ago.
+It is badly written and could be much better, but I was learning Z80 assembly as I went along.
 
 # Screenshot
 
-![Screenshot of the BASIC interpreter](docs/screenshots/basic.png)
+![Screenshot of RY-DOS](docs/screenshots/ry-dos.png)

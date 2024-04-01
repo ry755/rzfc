@@ -125,7 +125,7 @@ fn main() {
     }
 
     let mut window = Window::new(
-        "RY-Z80",
+        "RZFC",
         256,
         196,
         WindowOptions {
