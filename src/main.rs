@@ -118,19 +118,13 @@ fn main() {
     let mut tsc = TsClock::default();
     let mut cpu = Z80CMOS::default();
 
-    // randomize sram contents
-    let mut sram: [u8; 32*1024] = [0; 32*1024];
-    for i in sram.iter_mut() {
-        *i = rand::thread_rng().gen();
-    }
-
     let mut window = Window::new(
         "RZFC",
         256,
         196,
         WindowOptions {
             resize: false,
-            scale: Scale::X4,
+            scale: Scale::X2,
             ..WindowOptions::default()
         },
     ).expect("Unable to create window");
@@ -142,12 +136,10 @@ fn main() {
         vdp: TMS9918A::new(),
         sio: SIO { current_rr: 0, current_key: 0 },
         rom: *include_bytes!("../rom.bin"),
-        ram: sram,
-        cold_reset: false,
+        ram: [0; 32*1024],
+        cold_reset: true,
         warm_reset: false
     };
-
-    cpu.reset();
 
     while window.is_open() {
         if bus.cold_reset {
